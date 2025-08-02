@@ -1,6 +1,6 @@
 import os
 from flask import Flask
-from .models import db, User # Import db and User model
+from .models import db, User  # Import db and User model
 from flask_bcrypt import Bcrypt
 from flask_wtf.csrf import CSRFProtect
 
@@ -29,7 +29,7 @@ def create_app(test_config=None):
     # Initialize extensions with the app
     bcrypt.init_app(app)
     csrf.init_app(app)
-    db.init_app(app) # Initialize Flask-SQLAlchemy with the app
+    db.init_app(app)  # Initialize Flask-SQLAlchemy with the app
 
     with app.app_context():
         # A simple method to ensure tables are created on startup
